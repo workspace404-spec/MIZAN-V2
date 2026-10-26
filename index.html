@@ -13,36 +13,50 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
 header{background:linear-gradient(120deg,#102f4d,#087783);color:#fff;padding:12px 14px;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001;display:flex;align-items:center;gap:10px}header .brand-logo{width:48px;height:48px;object-fit:contain;background:#fff;border-radius:12px;padding:3px}header .brand-copy h1{font-size:21px;margin:0}header p{margin:3px 0 0;font-size:12px;opacity:.9}
 main{max-width:850px;margin:auto;padding:12px 10px calc(100px + env(safe-area-inset-bottom))}.notice{font-size:13px;line-height:1.7;background:#fff7df;border:1px solid #eadca9;padding:10px 12px;border-radius:12px;margin-bottom:12px}
-.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px}.stat small{color:var(--muted);display:block}.stat strong{display:block;font-size:21px;margin-top:4px}
-nav{position:fixed;left:0;right:0;bottom:0;z-index:20;max-width:850px;margin:0 auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -3px 14px #102f4d12}nav button{padding:9px 1px;font-size:11px;border-radius:8px;white-space:nowrap}nav button:nth-child(1){background:#e8edf0;color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}.welcome{background:linear-gradient(120deg,#102f4d,#087783);color:#fff;border-radius:14px;padding:16px;margin-bottom:12px}.welcome h2{margin:0 0 6px}.welcome p{margin:0;font-size:13px;line-height:1.7;opacity:.94}.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0 14px}.quick-grid button{min-height:62px;text-align:right;background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 1px 3px #102f4d08}.quick-grid button span{display:block;color:var(--muted);font-size:12px;font-weight:400;margin-top:3px}.search-results{margin-top:8px}.search-results .item{margin-top:6px}.section-intro{font-size:13px;color:var(--muted);line-height:1.7;margin:-4px 0 12px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px}.stat small{color:var(--muted);display:block}.stat strong{display:block;font-size:21px;margin-top:4px}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:20;max-width:850px;margin:0 auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -3px 14px #102f4d12}nav button{padding:9px 1px;font-size:11px;border-radius:9px;white-space:nowrap;background:transparent;color:var(--muted);border:1px solid transparent;transition:background .15s,color .15s,border-color .15s}nav button.active{background:#e0eff0;color:#075e68;border-color:#b7d9db;font-weight:700;box-shadow:inset 0 -2px 0 #087783}nav button:focus-visible{outline:2px solid #087783;outline-offset:2px}
 button{border:0;border-radius:9px;padding:10px 12px;background:var(--accent);color:#fff;font:inherit;cursor:pointer}button.secondary{background:#e8edf0;color:var(--ink)}button.danger{background:var(--danger)}button:disabled{opacity:.5}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #0c7d87;outline-offset:2px}header .brand-logo{box-shadow:0 1px 4px #0002}
 h2{font-size:18px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}label{display:block;font-size:13px;color:var(--muted);margin:10px 0 5px}
 input,select,textarea{width:100%;padding:10px;border:1px solid #cfd7dc;border-radius:9px;background:#fff;color:var(--ink);font:inherit;font-size:16px}textarea{min-height:65px;resize:vertical}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.item{border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:8px;background:#fff}.item strong{display:block;margin-bottom:4px}.item small{color:var(--muted);line-height:1.7}.empty{color:var(--muted);font-size:14px;padding:12px 0}.hidden{display:none!important}.panel{margin-bottom:11px}
 .subnav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.subnav button{flex:1;min-width:80px}.active{outline:2px solid #9aaab4}.calendar-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.calendar-head strong{font-size:15px;text-align:center}.calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.dayname,.daycell{min-width:0;text-align:center;padding:6px 1px;font-size:12px}.dayname{color:var(--muted)}.daycell{background:#f8fafb;border:1px solid var(--line);border-radius:7px;min-height:47px;cursor:pointer}.daycell.muted{opacity:.45}.daycell.today{border:2px solid var(--accent)}.daycell.selected{background:#dce8ee}.daycell .dot{display:block;color:#344955;font-size:10px;white-space:nowrap;overflow:hidden}.pill{display:inline-block;padding:3px 7px;border-radius:6px;background:#edf1f3;font-size:12px;margin:2px}.overdue{background:#fde7e7}.due{background:var(--warn)}.done{background:var(--ok)}footer{text-align:center;color:var(--muted);font-size:12px;padding:15px 4px}
-@media(min-width:620px){.stats{grid-template-columns:repeat(4,1fr)}.daycell{min-height:62px;font-size:13px}nav button{font-size:12px}}
+@media(min-width:620px){.stats{grid-template-columns:repeat(4,1fr)}.daycell{min-height:62px;font-size:13px}nav button{font-size:12px}.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <header><img class="brand-logo" src="./mizan-logo.png" alt="شعار ميزان"><div class="brand-copy"><h1>ميزان <span style="font-weight:400">MIZAN</span></h1><p>إدارة مكتب المحاماة</p></div></header>
 <main>
-<div class="notice"><strong>تنبيه:</strong> البيانات محفوظة في هذا المتصفح على هذا الجهاز فقط. صدّر نسخة احتياطية قبل التحديث بانتظام. لا تستخدم بيانات موكلين حقيقية قبل اختبار النسخ الاحتياطي والاستعادة.</div>
+<div class="notice"><strong>تنبيه بيانات:</strong> المعلومات محفوظة في هذا المتصفح على هذا الجهاز فقط، ولا تتم مزامنتها تلقائيًا مع الهاتف أو جهاز آخر. صدّر نسخة احتياطية بانتظام، ولا تضع بيانات موكلين حقيقية في مستودع GitHub العام.</div>
+<nav aria-label="التنقل الرئيسي">
+<button class="nav-btn active" data-tab="home" aria-current="page" onclick="showTab('home')">الرئيسية</button>
+<button class="nav-btn" data-tab="tasks" onclick="showTab('tasks')">المهام</button>
+<button class="nav-btn" data-tab="clients" onclick="showTab('clients')">الموكلون</button>
+<button class="nav-btn" data-tab="cases" onclick="showTab('cases')">القضايا</button>
+<button class="nav-btn" data-tab="fees" onclick="showTab('fees')">الأتعاب</button>
+<button class="nav-btn" data-tab="sessions" onclick="showTab('sessions')">الجلسات</button>
+</nav>
+
+<section id="home" class="tab">
+<div class="welcome"><h2>صباح الخير، ميزان معك</h2><p>ملخص مكتبك واختصارات الوصول السريع. راجع المواعيد والمهام، ثم انتقل إلى القسم الذي تحتاجه.</p></div>
 <div class="stats">
 <div class="stat"><small>الموكلون</small><strong id="countClients">0</strong></div>
 <div class="stat"><small>القضايا</small><strong id="countCases">0</strong></div>
 <div class="stat"><small>إجمالي الأتعاب المتفق عليها</small><strong id="totalFees">0</strong></div>
 <div class="stat"><small>مواعيد قادمة</small><strong id="upcoming">0</strong></div>
 </div>
-<nav>
-<button onclick="showTab('agenda')">الأجندة</button>
-<button onclick="showTab('tasks')">المهام</button>
-<button onclick="showTab('clients')">الموكلون</button>
-<button onclick="showTab('cases')">القضايا</button>
-<button onclick="showTab('fees')">الأتعاب</button>
-<button onclick="showTab('sessions')">الجلسات</button>
-</nav>
+<div class="panel"><h2>بحث سريع</h2><p class="section-intro">ابحث باسم الموكل أو رقم الهاتف أو رقم التوكيل أو عنوان القضية أو رقمها.</p><input id="globalSearch" type="search" placeholder="اكتب اسمًا أو رقمًا للبحث…" autocomplete="off" aria-label="بحث في الموكلين والقضايا"><div id="globalSearchResults" class="search-results" aria-live="polite"><div class="empty">ابدأ الكتابة لعرض النتائج.</div></div></div>
+<div class="panel"><h2>الوصول السريع</h2><div class="quick-grid">
+<button onclick="showTab('clients');document.getElementById('clientForm').scrollIntoView({behavior:'smooth',block:'start'})">إضافة موكل<span>تسجيل بيانات الموكل والتوكيل</span></button>
+<button onclick="showTab('cases');document.getElementById('caseForm').scrollIntoView({behavior:'smooth',block:'start'})">إضافة قضية<span>ربط القضية بموكل</span></button>
+<button onclick="showTab('sessions');document.getElementById('sessionForm').scrollIntoView({behavior:'smooth',block:'start'})">إضافة جلسة<span>تسجيل موعد قادم</span></button>
+<button onclick="showTab('tasks');document.getElementById('taskForm').scrollIntoView({behavior:'smooth',block:'start'})">إضافة مهمة<span>تحديد المطلوب وموعده</span></button>
+<button onclick="showTab('agenda')">فتح الأجندة<span>عرض اليوم والأسبوع والشهر</span></button>
+<button onclick="showTab('backup')">النسخ الاحتياطي<span>تصدير البيانات أو استعادتها</span></button>
+</div></div>
+<div class="panel"><h2>ما يستحق المتابعة</h2><div id="dashboardFollowups"><div class="empty">جارٍ تجهيز الملخص…</div></div></div>
+</section>
 
-<section id="agenda" class="tab panel">
+<section id="agenda" class="tab panel hidden"><div class="actions" style="margin-bottom:10px"><button class="secondary" onclick="showTab('home')">العودة للرئيسية</button></div>
 <h2>الأجندة</h2>
 <div class="subnav">
 <button id="viewDayBtn" class="secondary" onclick="setAgendaView('day')">يومي</button>
@@ -77,8 +91,9 @@ input,select,textarea{width:100%;padding:10px;border:1px solid #cfd7dc;border-ra
 
 <section id="clients" class="tab panel hidden"><h2>الموكلون</h2>
 <form id="clientForm"><input type="hidden" name="id"><label>اسم الموكل *</label><input name="name" required maxlength="120">
-<div class="row"><div><label>رقم الهاتف</label><input name="phone" inputmode="tel"></div><div><label>رقم/مرجع الملف</label><input name="ref"></div></div>
-<label>ملاحظات</label><textarea name="notes"></textarea><div class="actions"><button id="clientSaveBtn">حفظ الموكل</button><button type="button" class="secondary" onclick="resetEntityForm('clientForm')">إلغاء / موكل جديد</button></div></form><div id="clientList"></div>
+<div class="row"><div><label>رقم الهاتف</label><input name="phone" inputmode="tel" autocomplete="tel"></div><div><label>رقم/مرجع الملف</label><input name="ref"></div></div>
+<h3 style="margin-top:16px">بيانات التوكيل (اختياري)</h3><div class="row"><div><label>رقم التوكيل</label><input name="poaNumber" maxlength="80" placeholder="رقم التوكيل"></div><div><label>تاريخ التوكيل</label><input name="poaDate" type="date"></div></div>
+<label>ملاحظات</label><textarea name="notes" maxlength="2000"></textarea><div class="actions"><button id="clientSaveBtn">حفظ الموكل</button><button type="button" class="secondary" onclick="resetEntityForm('clientForm')">إلغاء / موكل جديد</button></div></form><div id="clientList"></div>
 </section>
 
 <section id="cases" class="tab panel hidden"><h2>القضايا</h2>
@@ -103,11 +118,11 @@ input,select,textarea{width:100%;padding:10px;border:1px solid #cfd7dc;border-ra
 <label>المطلوب قبل الموعد</label><textarea name="task"></textarea><div class="actions"><button id="sessionSaveBtn">حفظ الموعد</button><button type="button" class="secondary" onclick="resetEntityForm('sessionForm')">إلغاء / موعد جديد</button></div></form><div id="sessionList"></div>
 </section>
 
-<section class="panel"><h2>النسخ الاحتياطي ونقل البيانات</h2>
+<section id="backup" class="tab panel hidden"><h2>النسخ الاحتياطي ونقل البيانات</h2><p class="section-intro">احتفظ بنسخة خارج المتصفح بانتظام، واختبر الاستعادة بملف تجريبي.</p>
 <p style="font-size:13px;line-height:1.7;color:var(--muted)">تصدير ملف JSON يحفظ الموكلين والقضايا والأتعاب والجلسات والمهام. الاستعادة تستبدل البيانات الحالية؛ صدّر نسخة من الوضع الحالي أولًا.</p>
 <div class="actions"><button onclick="exportBackup()">تصدير نسخة احتياطية</button><button class="secondary" onclick="document.getElementById('importFile').click()">استعادة نسخة</button><input id="importFile" type="file" accept=".json,application/json" class="hidden"></div>
-<div class="actions"><button class="danger" onclick="clearAll()">مسح كل البيانات</button></div></section>
-<footer>ميزان MIZAN — نسخة تطوير أولية؛ اختبر الوظائف والنسخ الاحتياطي قبل الاستخدام الفعلي.</footer>
+<div class="actions"><button class="danger" onclick="clearAll()">مسح كل البيانات</button></div><div class="actions"><button class="secondary" onclick="showTab('home')">العودة للرئيسية</button></div></section>
+<footer>ميزان MIZAN — نسخة تطوير تجريبية؛ اختبر الوظائف والنسخ الاحتياطي قبل الاستخدام الفعلي.</footer>
 </main>
 <script>
 'use strict';
@@ -127,7 +142,7 @@ function isoDate(d){const x=new Date(d);return `${x.getFullYear()}-${String(x.ge
 function dateOfWhen(v){if(!v)return '';const d=new Date(v);return isNaN(d)?String(v).slice(0,10):isoDate(d);}
 function dateLabel(s){if(!s)return 'دون تاريخ';const d=new Date(s+'T12:00:00');return isNaN(d)?s:d.toLocaleDateString('ar-EG',{year:'numeric',month:'short',day:'numeric'});}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(db));render();}catch(e){alert('تعذر حفظ البيانات. قد تكون مساحة التخزين ممتلئة. صدّر نسخة احتياطية فورًا.');console.error(e);}}
-function showTab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+function showTab(id){const target=document.getElementById(id);if(!target||!target.classList.contains('tab'))return;document.querySelectorAll('.tab').forEach(x=>x.classList.add('hidden'));target.classList.remove('hidden');const navId=(id==='agenda'||id==='backup')?'home':id;document.querySelectorAll('nav .nav-btn').forEach(b=>{const on=b.dataset.tab===navId;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});window.scrollTo({top:0,behavior:'smooth'});}
 function clientName(id){return db.clients.find(x=>x.id===id)?.name||'غير محدد';}
 function caseName(id){return db.cases.find(x=>x.id===id)?.title||'عمل إداري / دون قضية';}
 function list(id,items,renderer){const el=document.getElementById(id);el.innerHTML=items.length?items.map(renderer).join(''):'<div class="empty">لا توجد بيانات مسجلة بعد.</div>';}
@@ -151,13 +166,35 @@ function render(){
  document.getElementById('feeCase').innerHTML=opts(db.cases,x=>x.title,'— دون ربط بقضية —');
  document.getElementById('sessionCase').innerHTML=opts(db.cases,x=>x.title,'— موعد إداري / دون قضية —');
  const taskCase=document.getElementById('taskCase');const old=taskCase.value;taskCase.innerHTML=opts(db.cases,x=>x.title,'عمل إداري / دون قضية');if(db.cases.some(x=>x.id===old))taskCase.value=old;
- list('clientList',db.clients,x=>`<div class="item"><strong>${esc(x.name)}</strong><small>${esc(x.phone||'لا يوجد هاتف')} · ${esc(x.ref||'لا يوجد مرجع')}<br>${esc(x.notes||'')}</small><div class="actions"><button class="secondary" onclick="editEntity('clientForm','clients','${esc(x.id)}')">تعديل</button><button class="danger" onclick="removeItem('clients','${esc(x.id)}')">حذف</button></div></div>`);
+ list('clientList',db.clients,x=>`<div class="item"><strong>${esc(x.name)}</strong><small>${esc(x.phone||'لا يوجد هاتف')} · ${esc(x.ref||'لا يوجد مرجع')}${x.poaNumber?'<br>رقم التوكيل: '+esc(x.poaNumber):''}${x.poaDate?'<br>تاريخ التوكيل: '+esc(dateLabel(x.poaDate)):''}${x.notes?'<br>'+esc(x.notes):''}</small><div class="actions"><button class="secondary" onclick="editEntity('clientForm','clients','${esc(x.id)}')">تعديل</button><button class="danger" onclick="removeItem('clients','${esc(x.id)}')">حذف</button></div></div>`);
  list('caseList',db.cases,x=>`<div class="item"><strong>${esc(x.title)}</strong><small>${esc(clientName(x.clientId))} · ${esc(x.number||'دون رقم')} · ${esc(x.court||'دون محكمة')}<br>الحالة: ${esc(x.status||'')} ${x.type?'· '+esc(x.type):''}<br>${esc(x.notes||'')}</small><div class="actions"><button class="secondary" onclick="editEntity('caseForm','cases','${esc(x.id)}')">تعديل</button><button class="danger" onclick="removeItem('cases','${esc(x.id)}')">حذف</button></div></div>`);
  const kinds={agreed:'أتعاب متفق عليها',paid:'تحصيل',expense:'مصروفات'};
  list('feeList',db.fees.slice().reverse(),x=>`<div class="item"><strong>${money(x.amount)} — ${esc(kinds[x.kind]||x.kind)}</strong><small>${esc(caseName(x.caseId))} · ${esc(x.date||'دون تاريخ')}<br>${esc(x.note||'')}</small><div class="actions"><button class="secondary" onclick="editEntity('feeForm','fees','${esc(x.id)}')">تعديل</button><button class="danger" onclick="removeItem('fees','${esc(x.id)}')">حذف</button></div></div>`);
  list('sessionList',db.sessions.slice().sort((a,b)=>new Date(a.when)-new Date(b.when)),x=>`<div class="item"><strong>${esc(new Date(x.when).toLocaleString('ar-EG'))}</strong><small>${esc(caseName(x.caseId))} · ${esc(x.place||'')} · ${esc(x.kind||'')}<br>${esc(x.task||'')}</small><div class="actions"><button class="secondary" onclick="editEntity('sessionForm','sessions','${esc(x.id)}')">تعديل</button><button class="danger" onclick="removeItem('sessions','${esc(x.id)}')">حذف</button></div></div>`);
- renderTasks();renderAgenda();
+ renderTasks();renderAgenda();renderDashboard();runGlobalSearch();
 }
+function renderDashboard(){
+ const today=isoDate(new Date());
+ const dueTasks=db.tasks.filter(t=>t.status!=='done'&&t.dueDate<=today).sort((a,b)=>(a.dueDate||'').localeCompare(b.dueDate||''));
+ const upcomingSessions=db.sessions.filter(x=>{const d=sessionDate(x);return d>=today;}).sort((a,b)=>(a.when||'').localeCompare(b.when||'')).slice(0,5);
+ const parts=[];
+ if(dueTasks.length)parts.push(`<div class="item"><strong>مهام مستحقة أو متأخرة (${dueTasks.length})</strong>${dueTasks.slice(0,4).map(t=>`<small>${esc(t.dueDate===today?'اليوم':dateLabel(t.dueDate))} · ${esc(t.title)} — ${esc(taskStatus(t.status))}</small>`).join('<br>')}<div class="actions"><button class="secondary" onclick="taskFilter='overdue';showTab('tasks');render()">مراجعة المهام</button></div></div>`);
+ if(upcomingSessions.length)parts.push(`<div class="item"><strong>أقرب الجلسات والمواعيد</strong>${upcomingSessions.map(x=>`<small>${esc(dateLabel(sessionDate(x)))} · ${esc((x.when||'').slice(11,16))} · ${esc(x.kind||'موعد')} · ${esc(caseName(x.caseId))}</small>`).join('<br>')}<div class="actions"><button class="secondary" onclick="showTab('sessions')">عرض الجلسات</button><button class="secondary" onclick="showTab('agenda')">فتح الأجندة</button></div></div>`);
+ document.getElementById('dashboardFollowups').innerHTML=parts.length?parts.join(''):'<div class="empty">لا توجد مهام مستحقة أو مواعيد قادمة مسجلة. أضف موعدًا أو مهمة لتظهر هنا.</div>';
+}
+function runGlobalSearch(){
+ const input=document.getElementById('globalSearch');if(!input)return;const q=input.value.trim().toLocaleLowerCase('ar');const out=document.getElementById('globalSearchResults');
+ if(!q){out.innerHTML='<div class="empty">ابدأ الكتابة لعرض النتائج.</div>';return;}
+ const results=[];
+ db.clients.forEach(x=>{const hay=[x.name,x.phone,x.ref,x.poaNumber,x.poaDate,x.notes].join(' ').toLocaleLowerCase('ar');if(hay.includes(q))results.push({kind:'موكل',title:x.name,detail:[x.phone,x.poaNumber?'توكيل '+x.poaNumber:''].filter(Boolean).join(' · '),action:`showTab('clients');document.getElementById('clientForm').scrollIntoView({behavior:'smooth'});`,id:x.id,collection:'clients'});});
+ db.cases.forEach(x=>{const hay=[x.title,x.number,x.court,x.type,x.status,x.notes,clientName(x.clientId)].join(' ').toLocaleLowerCase('ar');if(hay.includes(q))results.push({kind:'قضية',title:x.title,detail:[clientName(x.clientId),x.number].filter(Boolean).join(' · '),id:x.id,collection:'cases'});});
+ db.tasks.forEach(x=>{const hay=[x.title,x.notes,caseName(x.caseId),x.dueDate].join(' ').toLocaleLowerCase('ar');if(hay.includes(q))results.push({kind:'مهمة',title:x.title,detail:[dateLabel(x.dueDate),taskStatus(x.status)].join(' · '),id:x.id,collection:'tasks'});});
+ db.sessions.forEach(x=>{const hay=[x.kind,x.place,x.task,caseName(x.caseId),x.when].join(' ').toLocaleLowerCase('ar');if(hay.includes(q))results.push({kind:'موعد',title:x.kind||'موعد',detail:[dateLabel(sessionDate(x)),caseName(x.caseId),x.place].filter(Boolean).join(' · '),id:x.id,collection:'sessions'});});
+ const safe=results.slice(0,12);
+ out.innerHTML=safe.length?safe.map(x=>`<div class="item"><strong>${esc(x.title)} <span class="pill">${esc(x.kind)}</span></strong><small>${esc(x.detail||'')}</small><div class="actions"><button class="secondary" onclick="openSearchResult('${esc(x.collection)}','${esc(x.id)}')">فتح السجل</button></div></div>`).join(''):'<div class="empty">لا توجد نتائج مطابقة.</div>';
+}
+function openSearchResult(collection,id){const map={clients:'clientForm',cases:'caseForm',sessions:'sessionForm'};if(collection==='tasks'){editTask(id);return;}const form=map[collection];if(form)editEntity(form,collection,id);}
+document.getElementById('globalSearch').addEventListener('input',runGlobalSearch);
 function resetTaskForm(){document.getElementById('taskForm').reset();document.querySelector('#taskForm [name="id"]').value='';document.getElementById('taskFormTitle').textContent='إضافة مهمة';document.getElementById('taskSaveBtn').textContent='حفظ المهمة';}
 document.getElementById('taskForm').addEventListener('submit',e=>{
  e.preventDefault();const f=e.target,x=formData(f);const id=x.id;delete x.id;
@@ -216,7 +253,7 @@ Object.keys(entityConfig).forEach(bindEntityForm);
 function exportBackup(){const blob=new Blob([JSON.stringify({app:'MIZAN',version:2,exportedAt:new Date().toISOString(),data:db},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='MIZAN-backup-'+isoDate(new Date())+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 document.getElementById('importFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const obj=JSON.parse(await file.text());const d=obj.data||obj;if(!['clients','cases','fees','sessions'].every(k=>Array.isArray(d[k])))throw new Error('invalid');if(d.tasks!==undefined&&!Array.isArray(d.tasks))throw new Error('invalid tasks');const safe={clients:d.clients,cases:d.cases,fees:d.fees,sessions:d.sessions,tasks:Array.isArray(d.tasks)?d.tasks:[]};if(!confirm('ستُستبدل البيانات الحالية بمحتوى النسخة الاحتياطية. صدّر نسخة من البيانات الحالية أولًا. هل تريد المتابعة؟'))return;db=safe;save();alert('تمت استعادة النسخة على هذا الجهاز. راجع السجلات قبل الاستخدام.');}catch(err){alert('تعذر قراءة الملف. اختر نسخة احتياطية صحيحة من ميزان.');console.error(err);}finally{e.target.value='';}});
 function clearAll(){if(confirm('تحذير: سيُحذف كل ما هو مسجل في هذا المتصفح. هل صدّرت نسخة احتياطية؟')&&confirm('تأكيد أخير: حذف كل البيانات نهائيًا؟')){db={clients:[],cases:[],fees:[],sessions:[],tasks:[]};resetTaskForm();save();}}
-render();setAgendaView('day');
+render();setAgendaView('day');showTab('home');
 if('serviceWorker'in navigator&&(location.protocol==='https:'||location.hostname==='localhost'))window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));
 </script>
 </body>
